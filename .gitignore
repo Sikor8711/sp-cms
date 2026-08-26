@@ -1,0 +1,21 @@
+# ---- Rust / Cargo ----
+/target
+**/*.rs.bk
+
+# Cargo.lock: KEEP it committed. Your workspace has a binary (`web`),
+# so the lockfile is one at the root and should be tracked — don't ignore it.
+
+# ---- Secrets / env ----
+.env
+.env.*
+!.env.example
+
+# ---- IDE / editor ----
+/.idea/
+/.vscode/
+*.swp
+*~
+
+# ---- OS cruft ----
+.DS_Store
+Thumbs.db
