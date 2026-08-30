@@ -15,8 +15,8 @@ site-root = "target/site"
 site-pkg-dir = "pkg"
 style-file = "web/style/main.scss"
 
-site-addr = "192.168.1.247:3005"
-reload-port = 3006
+site-addr = "192.168.1.247:3000"
+reload-port = 3001
 
 bin-features = ["ssr"]
 bin-default-features = false

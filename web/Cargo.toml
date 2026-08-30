@@ -15,11 +15,20 @@ tokio = { version = "1", features = ["rt-multi-thread"], optional = true }
 leptos_axum = { version = "0.8", optional = true }
 console_error_panic_hook = { version = "0.1", optional = true }
 wasm-bindgen = { version = "0.2", optional = true }
+cms-core = { path = "../cms-core" }
+sqlx = { version = "0.8", features = [
+  "postgres",
+  "runtime-tokio",
+  "tls-rustls",
+], optional = true }
+dotenvy = { version = "0.15", optional = true }
 
 [features]
 default = []
 hydrate = ["leptos/hydrate", "dep:console_error_panic_hook", "dep:wasm-bindgen"]
 ssr = [
+  "dep:sqlx",
+  "dep:dotenvy",
   "dep:axum",
   "dep:tokio",
   "dep:leptos_axum",
